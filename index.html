@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesso · Medicina Interna Soverato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="login">
+    <header class="auth-header">
+        <div class="container auth-header__inner">
+            <div class="brand">
+                <span class="brand__accent"></span>
+                <span class="brand__title">Medicina Interna Soverato</span>
+            </div>
+            <p class="auth-header__note">Portale interno del reparto · Accesso riservato</p>
+        </div>
+    </header>
+
+    <main class="auth">
+        <div class="container auth__grid">
+            <div class="auth__intro">
+                <p class="eyebrow">Accesso riservato</p>
+                <h1>Benvenuti nel portale operativo del reparto</h1>
+                <p class="lead">
+                    Consulta comunicazioni, linee guida, procedure e modulistica direttamente dal portale interno
+                    della Medicina Interna di Soverato. L'accesso è consentito esclusivamente al personale autorizzato.
+                </p>
+                <div class="auth__media">
+                    <img src="assets/hero.jpg" alt="Equipe del reparto di Medicina Interna di Soverato">
+                </div>
+            </div>
+
+            <section class="card auth__form" aria-labelledby="accesso-title">
+                <h2 id="accesso-title">Accedi con credenziali dipartimentali</h2>
+                <p class="auth__hint">Utilizza le credenziali fornite dalla direzione del reparto. Per assistenza scrivere a
+                    <a href="mailto:it@ospedalesoverato.it">it@ospedalesoverato.it</a>.</p>
+                <form id="login-form" class="form form--compact" novalidate>
+                    <label>
+                        Email istituzionale
+                        <input type="email" name="email" autocomplete="username" required>
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" autocomplete="current-password" required>
+                    </label>
+                    <p id="login-error" class="auth__alert" role="alert" hidden></p>
+                    <button class="btn btn--primary" type="submit">Accedi</button>
+                    <a class="form__link" href="#">Richiedi o reimposta le credenziali</a>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer footer--auth">
+        <div class="container footer__inner">
+            <div>
+                <strong>Medicina Interna Soverato</strong>
+                <p>Ospedale di Soverato · Via Lungomare Europa · Tel. Centralino 0967 531111</p>
+            </div>
+            <p class="footer__meta-text">Accesso monitorato · Uso esclusivamente interno</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

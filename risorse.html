@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risorse utili · Medicina Interna Soverato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="resources">
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <div class="brand">
+                <span class="brand__accent"></span>
+                <span class="brand__title">Medicina Interna Soverato</span>
+            </div>
+            <nav class="nav">
+                <button class="nav__toggle" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                    <span class="visually-hidden">Apri menu</span>
+                </button>
+                <ul id="main-navigation" class="nav__list">
+                    <li><a href="home.html">Dashboard</a></li>
+                    <li><a href="bacheca.html">Bacheca</a></li>
+                    <li><a href="linee-guida.html">Linee guida</a></li>
+                    <li><a href="procedure.html">Procedure</a></li>
+                    <li><a href="modulistica.html">Modulistica</a></li>
+                    <li><a class="is-active" href="risorse.html">Risorse utili</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <span class="user-pill" id="user-badge" hidden></span>
+                    <button class="btn btn--ghost btn--small" type="button" data-action="logout">Esci</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="link-utili" class="section">
+            <div class="container">
+                <header class="section__header">
+                    <h1>Link utili</h1>
+                    <p>Raccoglie i riferimenti principali a risorse esterne e intranet.</p>
+                </header>
+                <div class="card">
+                    <ul id="links-list" class="list list--links"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="numeri-utili" class="section section--alt">
+            <div class="container">
+                <header class="section__header">
+                    <h2>Numeri utili</h2>
+                    <p>Contatti rapidi del reparto e dei servizi di supporto.</p>
+                </header>
+                <div class="section__tools section__tools--stack" role="search">
+                    <label class="search-field">
+                        <span class="visually-hidden">Cerca numeri utili</span>
+                        <input type="search" id="numbers-search" placeholder="Cerca per servizio, reparto o numero..."
+                            autocomplete="off">
+                    </label>
+                </div>
+                <div class="grid grid--two">
+                    <div class="card">
+                        <h3>Reparto</h3>
+                        <ul id="numbers-department" class="list list--contacts"></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Servizi ospedalieri</h3>
+                        <ul id="numbers-hospital" class="list list--contacts"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div>
+                <strong>Medicina Interna Soverato</strong>
+                <p>Ospedale di Soverato · Via Lungomare Europa · Tel. Centralino 0967 531111</p>
+            </div>
+            <div class="footer__meta">
+                <p class="footer__update">Ultimo aggiornamento <span id="last-update"></span></p>
+                <button class="btn btn--ghost btn--small" type="button" data-action="logout">Esci</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
