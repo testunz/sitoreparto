@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linee guida · Medicina Interna Soverato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="guidelines">
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <div class="brand">
+                <span class="brand__accent"></span>
+                <span class="brand__title">Medicina Interna Soverato</span>
+            </div>
+            <nav class="nav">
+                <button class="nav__toggle" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                    <span class="visually-hidden">Apri menu</span>
+                </button>
+                <ul id="main-navigation" class="nav__list">
+                    <li><a href="home.html">Dashboard</a></li>
+                    <li><a href="bacheca.html">Bacheca</a></li>
+                    <li><a class="is-active" href="linee-guida.html">Linee guida</a></li>
+                    <li><a href="procedure.html">Procedure</a></li>
+                    <li><a href="modulistica.html">Modulistica</a></li>
+                    <li><a href="risorse.html">Risorse utili</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <span class="user-pill" id="user-badge" hidden></span>
+                    <button class="btn btn--ghost btn--small" type="button" data-action="logout">Esci</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="linee-guida" class="section section--alt">
+            <div class="container">
+                <header class="section__header">
+                    <h1>Linee guida di reparto</h1>
+                    <p>Consulta e scarica le linee guida aggiornate. Carica nuovi documenti quando disponibili.</p>
+                </header>
+                <div class="section__tools" role="search">
+                    <label class="search-field">
+                        <span class="visually-hidden">Cerca linee guida</span>
+                        <input type="search" id="guidelines-search" placeholder="Cerca per titolo, descrizione o formato..."
+                            autocomplete="off">
+                    </label>
+                </div>
+                <div class="split">
+                    <div class="card">
+                        <ul id="guidelines-list" class="list list--media"></ul>
+                    </div>
+                    <form id="guidelines-form" class="card form" aria-label="Carica nuova linea guida">
+                        <h2>Carica linea guida</h2>
+                        <label>
+                            Titolo
+                            <input name="title" type="text" required>
+                        </label>
+                        <label>
+                            Descrizione
+                            <textarea name="description" rows="3" required></textarea>
+                        </label>
+                        <label>
+                            Documento
+                            <input name="file" type="file" accept=".pdf,.doc,.docx" required>
+                        </label>
+                        <button class="btn btn--primary" type="submit">Salva</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div>
+                <strong>Medicina Interna Soverato</strong>
+                <p>Ospedale di Soverato · Via Lungomare Europa · Tel. Centralino 0967 531111</p>
+            </div>
+            <div class="footer__meta">
+                <p class="footer__update">Ultimo aggiornamento <span id="last-update"></span></p>
+                <button class="btn btn--ghost btn--small" type="button" data-action="logout">Esci</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
